@@ -13,7 +13,7 @@ const {Server} = require("socket.io");
 const mongodb_password = process.env.mongodb_password;
 
 // const dir_name = dirname(fileURLToPath(import.meta.url));
-const port = 3000;
+const port = process.env.PORT || 3000;
 const io = new Server(server);
 
 app.use(bodyParser.urlencoded({extended:true}));
